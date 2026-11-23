@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vale Computing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f172a;
+    color:white;
+    min-height:100vh;
+}
+
+.hero{
+    text-align:center;
+    padding:80px 20px 50px 20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:10px;
+    color:white;
+}
+
+.hero p{
+    font-size:1.2rem;
+    color:#94a3b8;
+}
+
+.tiles{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.tile{
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+    min-height:250px;
+    text-decoration:none;
+    color:white;
+    transition:all 0.3s ease;
+    background:#1e293b;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.tile:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+.tile::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    opacity:0.75;
+}
+
+.tile-1::before{
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #06b6d4
+    );
+}
+
+.tile-2::before{
+    background:linear-gradient(
+        135deg,
+        #7c3aed,
+        #ec4899
+    );
+}
+
+.tile-content{
+    position:relative;
+    z-index:2;
+    padding:30px;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+}
+
+.tile-tag{
+    display:inline-block;
+    background:rgba(255,255,255,0.2);
+    padding:6px 12px;
+    border-radius:50px;
+    font-size:0.8rem;
+    width:max-content;
+    margin-bottom:15px;
+}
+
+.tile h2{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.tile p{
+    color:rgba(255,255,255,0.9);
+}
+
+.coming-soon{
+    background:#1e293b;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.2rem;
+    color:#94a3b8;
+}
+
+footer{
+    text-align:center;
+    padding:50px 20px;
+    color:#64748b;
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <h1>Vale Computing</h1>
+    <p>GCSE Computer Science Revision, Resources & Exam Preparation</p>
+</section>
+
+<section class="tiles">
+
+    <a href="j277-01.html" class="tile tile-1">
+        <div class="tile-content">
+            <span class="tile-tag">Paper 1</span>
+            <h2>J277/01</h2>
+            <p>
+                Computer Systems<br>
+                Systems Architecture, Memory, Storage,
+                Networks, Security and Systems Software
+            </p>
+        </div>
+    </a>
+
+    <a href="j277-02.html" class="tile tile-2">
+        <div class="tile-content">
+            <span class="tile-tag">Paper 2</span>
+            <h2>J277/02</h2>
+            <p>
+                Computational Thinking,
+                Algorithms and Programming
+            </p>
+        </div>
+    </a>
+
+    <div class="tile coming-soon">
+        More resources coming soon...
+    </div>
+
+</section>
+
+<footer>
+    Vale Computing © 2026
+</footer>
+
+</body>
+</html>
